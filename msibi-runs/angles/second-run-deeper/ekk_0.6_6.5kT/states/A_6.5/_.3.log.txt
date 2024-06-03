@@ -1,0 +1,166 @@
+HOOMD-blue 2.9.6 CUDA (10.2) DOUBLE HPMC_MIXED TBB SSE SSE2 SSE3 
+Compiled: 03/17/2021
+Copyright (c) 2009-2019 The Regents of the University of Michigan.
+-----
+You are using HOOMD-blue. Please cite the following:
+* J A Anderson, J Glaser, and S C Glotzer. "HOOMD-blue: A Python package for
+  high-performance molecular dynamics and hard particle Monte Carlo
+  simulations", Computational Materials Science 173 (2020) 109363
+-----
+HOOMD-blue is running on the following GPU(s):
+ [0]  Tesla P100-PCIE-12GB  56 SM_6.0 @ 1.33 GHz, 12198 MiB DRAM, MNG
+run.py:007  |  system = read_gsd("/home/erjank_project/chrisjones/pekk-msibi-final/learning-runs/single-chains/workspace/0f2d30692a6cdb8fd90ae3f6aec03a03/components.gsd", frame=-1, time_step=0)
+notice(2): Group "all" created containing 60 particles
+run.py:009  |  nl = hoomd.md.nlist.tree()
+-----
+You are using tree neighbor lists. Please cite the following:
+* M P Howard, J A Anderson, A Nikoubashman, S C Glotzer, and A Z
+  Panagiotopoulos. "Efficient neighbor list calculation for molecular simulation
+  of colloidal systems using graphics processing units", Computer Physics
+  Communications 203 (2016) 45--52
+* M P Howard, A Statt, F Madutsa, T M Truskett, and A Z Panagiotopoulos.
+  "Quantized bounding volume hierarchies for neighbor search in molecular
+  simulations on graphics processing units", Computational Materials Science 164
+  (2019) 139--146
+-----
+run.py:010  |  nl.reset_exclusions(exclusions=['1-2', '1-3'])
+notice(2): -- Neighborlist exclusion statistics -- :
+notice(2): Particles with 2 exclusions             : 2
+notice(2): Particles with 3 exclusions             : 2
+notice(2): Particles with 4 exclusions             : 56
+notice(2): Neighbors included by diameter          : no
+notice(2): Neighbors excluded when in the same body: no
+run.py:012  |  table=hoomd.md.pair.table(width=101,nlist=nl)
+run.py:013  |  table.set_from_file('E', 'E', filename='/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/pairs-6.5kT/workspace/cf6f340fd41d9f9119443c10dc659a95/E-E_final.txt')
+run.py:014  |  table.set_from_file('K', 'K', filename='/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/pairs-6.5kT/workspace/cf6f340fd41d9f9119443c10dc659a95/K-K_final.txt')
+run.py:015  |  table.set_from_file('E', 'K', filename='/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/pairs-6.5kT/workspace/cf6f340fd41d9f9119443c10dc659a95/E-K_final.txt')
+run.py:016  |  harmonic_bond = hoomd.md.bond.harmonic()
+run.py:017  |  harmonic_bond.bond_coeff.set('E-K', k=850, r0=1.47)
+run.py:018  |  harmonic_bond.bond_coeff.set('K-K', k=1450, r0=1.53)
+run.py:019  |  atable = hoomd.md.angle.table(width=200)
+run.py:020  |  atable.set_from_file('E-K-K', '/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/potentials/angle_pot.E-K-K')
+run.py:021  |  atable.set_from_file('K-E-K', '/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/potentials/angle_pot.K-E-K')
+run.py:022  |  harmonic_dihedral = hoomd.md.dihedral.harmonic()
+run.py:023  |  harmonic_dihedral.dihedral_coeff.set('E-K-K-E', k=16, d=-1, n=1, phi0=0)
+run.py:024  |  harmonic_dihedral.dihedral_coeff.set('K-E-K-K', k=12, d=-1, n=1, phi0=0)
+run.py:026  |  _all = hoomd.group.all()
+run.py:027  |  hoomd.md.integrate.mode_standard(0.0003)
+run.py:029  |  integrator = hoomd.md.integrate.nvt(group=_all, **integrator_kwargs)
+run.py:000  |  
+import hoomd
+import hoomd.md
+from hoomd.init import read_gsd
+
+hoomd.context.initialize("")
+system = read_gsd("/home/erjank_project/chrisjones/pekk-msibi-final/learning-runs/single-chains/workspace/0f2d30692a6cdb8fd90ae3f6aec03a03/components.gsd", frame=-1, time_step=0)
+
+nl = hoomd.md.nlist.tree()
+nl.reset_exclusions(exclusions=['1-2', '1-3'])
+
+table=hoomd.md.pair.table(width=101,nlist=nl)
+table.set_from_file('E', 'E', filename='/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/pairs-6.5kT/workspace/cf6f340fd41d9f9119443c10dc659a95/E-E_final.txt')
+table.set_from_file('K', 'K', filename='/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/pairs-6.5kT/workspace/cf6f340fd41d9f9119443c10dc659a95/K-K_final.txt')
+table.set_from_file('E', 'K', filename='/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/pairs-6.5kT/workspace/cf6f340fd41d9f9119443c10dc659a95/E-K_final.txt')
+harmonic_bond = hoomd.md.bond.harmonic()
+harmonic_bond.bond_coeff.set('E-K', k=850, r0=1.47)
+harmonic_bond.bond_coeff.set('K-K', k=1450, r0=1.53)
+atable = hoomd.md.angle.table(width=200)
+atable.set_from_file('E-K-K', '/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/potentials/angle_pot.E-K-K')
+atable.set_from_file('K-E-K', '/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/potentials/angle_pot.K-E-K')
+harmonic_dihedral = hoomd.md.dihedral.harmonic()
+harmonic_dihedral.dihedral_coeff.set('E-K-K-E', k=16, d=-1, n=1, phi0=0)
+harmonic_dihedral.dihedral_coeff.set('K-E-K-K', k=12, d=-1, n=1, phi0=0)
+
+_all = hoomd.group.all()
+hoomd.md.integrate.mode_standard(0.0003)
+integrator_kwargs = {'tau': 0.01, 'kT': 6.5}
+integrator = hoomd.md.integrate.nvt(group=_all, **integrator_kwargs)
+
+
+hoomd.dump.gsd(
+run.py:040  |  hoomd.run(6000000)
+notice(2): Notice: Possible typo? Force coeff phi0 is specified for type E-K-K-E, but is not used by the dihedral force
+notice(2): Notice: Possible typo? Force coeff phi0 is specified for type K-E-K-K, but is not used by the dihedral force
+** starting run **
+Time 00:00:10 | Step 76025 / 6000000 | TPS 7602.5 | ETA 00:12:59
+Time 00:00:20 | Step 157350 / 6000000 | TPS 8132.47 | ETA 00:11:58
+Time 00:00:30 | Step 236605 / 6000000 | TPS 7925.45 | ETA 00:12:07
+Time 00:00:40 | Step 315859 / 6000000 | TPS 7925.36 | ETA 00:11:57
+Time 00:00:50 | Step 396517 / 6000000 | TPS 8065.7 | ETA 00:11:34
+Time 00:01:00 | Step 476121 / 6000000 | TPS 7960.38 | ETA 00:11:33
+Time 00:01:10 | Step 556583 / 6000000 | TPS 8046.12 | ETA 00:11:16
+Time 00:01:20 | Step 635458 / 6000000 | TPS 7887.42 | ETA 00:11:20
+Time 00:01:30 | Step 715345 / 6000000 | TPS 7988.69 | ETA 00:11:01
+Time 00:01:40 | Step 797039 / 6000000 | TPS 8169.31 | ETA 00:10:36
+Time 00:01:50 | Step 875815 / 6000000 | TPS 7877.53 | ETA 00:10:50
+Time 00:02:00 | Step 955803 / 6000000 | TPS 7998.79 | ETA 00:10:30
+Time 00:02:10 | Step 1036313 / 6000000 | TPS 8050.92 | ETA 00:10:16
+Time 00:02:20 | Step 1117276 / 6000000 | TPS 8096.23 | ETA 00:10:03
+Time 00:02:30 | Step 1197266 / 6000000 | TPS 7998.98 | ETA 00:10:00
+Time 00:02:40 | Step 1276968 / 6000000 | TPS 7970.17 | ETA 00:09:52
+Time 00:02:50 | Step 1358290 / 6000000 | TPS 8132.11 | ETA 00:09:30
+Time 00:03:00 | Step 1438925 / 6000000 | TPS 8063.45 | ETA 00:09:25
+Time 00:03:10 | Step 1519780 / 6000000 | TPS 8085.49 | ETA 00:09:14
+Time 00:03:20 | Step 1600872 / 6000000 | TPS 8109.2 | ETA 00:09:02
+Time 00:03:30 | Step 1681461 / 6000000 | TPS 8058.84 | ETA 00:08:55
+Time 00:03:40 | Step 1762502 / 6000000 | TPS 8104.03 | ETA 00:08:42
+Time 00:03:50 | Step 1842677 / 6000000 | TPS 8017.43 | ETA 00:08:38
+Time 00:04:00 | Step 1923861 / 6000000 | TPS 8118.37 | ETA 00:08:22
+Time 00:04:10 | Step 2003672 / 6000000 | TPS 7981.03 | ETA 00:08:20
+Time 00:04:20 | Step 2084967 / 6000000 | TPS 8129.43 | ETA 00:08:01
+Time 00:04:30 | Step 2165214 / 6000000 | TPS 8024.65 | ETA 00:07:57
+Time 00:04:40 | Step 2244705 / 6000000 | TPS 7949.06 | ETA 00:07:52
+Time 00:04:50 | Step 2326384 / 6000000 | TPS 8167.89 | ETA 00:07:29
+Time 00:05:00 | Step 2406522 / 6000000 | TPS 8013.75 | ETA 00:07:28
+Time 00:05:10 | Step 2489495 / 6000000 | TPS 8297.21 | ETA 00:07:03
+Time 00:05:20 | Step 2569453 / 6000000 | TPS 7995.72 | ETA 00:07:09
+Time 00:05:30 | Step 2648655 / 6000000 | TPS 7920.16 | ETA 00:07:03
+Time 00:05:40 | Step 2728394 / 6000000 | TPS 7973.84 | ETA 00:06:50
+Time 00:05:50 | Step 2807512 / 6000000 | TPS 7911.78 | ETA 00:06:43
+Time 00:06:00 | Step 2887182 / 6000000 | TPS 7966.93 | ETA 00:06:30
+Time 00:06:10 | Step 2969622 / 6000000 | TPS 8243.99 | ETA 00:06:07
+Time 00:06:20 | Step 3051816 / 6000000 | TPS 8219.31 | ETA 00:05:58
+Time 00:06:30 | Step 3131437 / 6000000 | TPS 7962.04 | ETA 00:06:00
+Time 00:06:40 | Step 3210635 / 6000000 | TPS 7919.77 | ETA 00:05:52
+Time 00:06:50 | Step 3290034 / 6000000 | TPS 7939.85 | ETA 00:05:41
+Time 00:07:00 | Step 3369222 / 6000000 | TPS 7918.76 | ETA 00:05:32
+Time 00:07:10 | Step 3449067 / 6000000 | TPS 7984.41 | ETA 00:05:19
+Time 00:07:20 | Step 3529682 / 6000000 | TPS 8061.47 | ETA 00:05:06
+Time 00:07:30 | Step 3610973 / 6000000 | TPS 8129.09 | ETA 00:04:53
+Time 00:07:40 | Step 3694148 / 6000000 | TPS 8317.41 | ETA 00:04:37
+Time 00:07:50 | Step 3774582 / 6000000 | TPS 8043.39 | ETA 00:04:36
+Time 00:08:00 | Step 3855052 / 6000000 | TPS 8046.92 | ETA 00:04:26
+Time 00:08:10 | Step 3934645 / 6000000 | TPS 7959.23 | ETA 00:04:19
+Time 00:08:20 | Step 4017059 / 6000000 | TPS 8241.32 | ETA 00:04:00
+Time 00:08:30 | Step 4097830 / 6000000 | TPS 8077.09 | ETA 00:03:55
+Time 00:08:40 | Step 4177790 / 6000000 | TPS 7995.92 | ETA 00:03:47
+Time 00:08:50 | Step 4256088 / 6000000 | TPS 7829.73 | ETA 00:03:42
+Time 00:09:00 | Step 4335009 / 6000000 | TPS 7892.04 | ETA 00:03:30
+Time 00:09:10 | Step 4414915 / 6000000 | TPS 7990.58 | ETA 00:03:18
+Time 00:09:20 | Step 4494269 / 6000000 | TPS 7935.32 | ETA 00:03:09
+Time 00:09:30 | Step 4574097 / 6000000 | TPS 7982.7 | ETA 00:02:58
+Time 00:09:40 | Step 4653529 / 6000000 | TPS 7943.19 | ETA 00:02:49
+Time 00:09:50 | Step 4732841 / 6000000 | TPS 7931.13 | ETA 00:02:39
+Time 00:10:00 | Step 4812674 / 6000000 | TPS 7983.29 | ETA 00:02:28
+Time 00:10:10 | Step 4892454 / 6000000 | TPS 7977.96 | ETA 00:02:18
+Time 00:10:20 | Step 4973210 / 6000000 | TPS 8075.52 | ETA 00:02:07
+Time 00:10:30 | Step 5053192 / 6000000 | TPS 7998.16 | ETA 00:01:58
+Time 00:10:40 | Step 5134806 / 6000000 | TPS 8161.31 | ETA 00:01:46
+Time 00:10:50 | Step 5216261 / 6000000 | TPS 8145.44 | ETA 00:01:36
+Time 00:11:00 | Step 5299160 / 6000000 | TPS 8289.81 | ETA 00:01:24
+Time 00:11:10 | Step 5380036 / 6000000 | TPS 8087.58 | ETA 00:01:16
+Time 00:11:20 | Step 5459699 / 6000000 | TPS 7966.27 | ETA 00:01:07
+Time 00:11:30 | Step 5540583 / 6000000 | TPS 8088.34 | ETA 00:00:56
+Time 00:11:40 | Step 5620461 / 6000000 | TPS 7987.76 | ETA 00:00:47
+Time 00:11:50 | Step 5701433 / 6000000 | TPS 8097.2 | ETA 00:00:36
+Time 00:12:00 | Step 5782579 / 6000000 | TPS 8114.51 | ETA 00:00:26
+Time 00:12:10 | Step 5863680 / 6000000 | TPS 8110.04 | ETA 00:00:16
+Time 00:12:20 | Step 5942322 / 6000000 | TPS 7864.2 | ETA 00:00:07
+Time 00:12:27 | Step 6000000 / 6000000 | TPS 7916.4 | ETA 00:00:00
+Average TPS: 8029.01
+---------
+-- Neighborlist stats:
+20077 normal updates / 20000 forced updates / 0 dangerous updates
+n_neigh_min: 9 / n_neigh_max: 42 / n_neigh_avg: 24.4
+shortest rebuild period: 70
+** run complete **

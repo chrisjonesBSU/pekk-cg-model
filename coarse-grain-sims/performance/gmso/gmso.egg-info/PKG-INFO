@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: gmso
+Version: 0.12.1.dev0
+Home-page: https://github.com/mosdef-hub/gmso
+Download-URL: https://github.com/mosdef-hub/gmso/tarball/0.12.1.dev0
+Author: Matthew W Thompson, Justin Gilmer
+Author-email: matt.thompson@vanderbilt.edu, justin.b.gilmer@vanderbilt.edu
+License: MIT
+Keywords: gmso
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6, <4
+License-File: LICENSE.rst

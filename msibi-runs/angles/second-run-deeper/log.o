@@ -1,0 +1,196 @@
+Run 0 for para weight 1.0
+---Angle Optimization: 1 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 1: 0.953017
+K-E-K, State: A, Iteration: 1: 0.968740
+---Angle Optimization: 2 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 2: 0.984296
+K-E-K, State: A, Iteration: 2: 0.985464
+---Angle Optimization: 3 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 3: 0.980569
+K-E-K, State: A, Iteration: 3: 0.983123
+---Angle Optimization: 4 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 4: 0.973073
+K-E-K, State: A, Iteration: 4: 0.982491
+---Angle Optimization: 5 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 5: 0.987559
+K-E-K, State: A, Iteration: 5: 0.979981
+---Angle Optimization: 6 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 6: 0.989065
+K-E-K, State: A, Iteration: 6: 0.983765
+---Angle Optimization: 7 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 7: 0.980678
+K-E-K, State: A, Iteration: 7: 0.981337
+---Angle Optimization: 8 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 8: 0.982224
+K-E-K, State: A, Iteration: 8: 0.984954
+Run 1 for para weight 0.6
+---Angle Optimization: 1 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 1: 0.956228
+K-E-K, State: A, Iteration: 1: 0.966009
+---Angle Optimization: 2 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 2: 0.972819
+K-E-K, State: A, Iteration: 2: 0.985676
+---Angle Optimization: 3 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 3: 0.975778
+K-E-K, State: A, Iteration: 3: 0.982662
+---Angle Optimization: 4 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 4: 0.978135
+K-E-K, State: A, Iteration: 4: 0.977753
+---Angle Optimization: 5 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 5: 0.980849
+K-E-K, State: A, Iteration: 5: 0.977838
+---Angle Optimization: 6 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 6: 0.981856
+K-E-K, State: A, Iteration: 6: 0.983576
+---Angle Optimization: 7 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 7: 0.972928
+K-E-K, State: A, Iteration: 7: 0.974628
+---Angle Optimization: 8 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 8: 0.974144
+K-E-K, State: A, Iteration: 8: 0.981782
+Run 2 for para weight 0.8
+---Angle Optimization: 1 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 1: 0.953702
+K-E-K, State: A, Iteration: 1: 0.964286
+---Angle Optimization: 2 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 2: 0.982385
+K-E-K, State: A, Iteration: 2: 0.978248
+---Angle Optimization: 3 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 3: 0.970104
+K-E-K, State: A, Iteration: 3: 0.983107
+---Angle Optimization: 4 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 4: 0.984415
+K-E-K, State: A, Iteration: 4: 0.973519
+---Angle Optimization: 5 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 5: 0.977452
+K-E-K, State: A, Iteration: 5: 0.982790
+---Angle Optimization: 6 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 6: 0.973337
+K-E-K, State: A, Iteration: 6: 0.983732
+---Angle Optimization: 7 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 7: 0.981267
+K-E-K, State: A, Iteration: 7: 0.990537
+---Angle Optimization: 8 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 8: 0.971810
+K-E-K, State: A, Iteration: 8: 0.979705
+Run 3 for para weight 0.7
+---Angle Optimization: 1 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 1: 0.960932
+K-E-K, State: A, Iteration: 1: 0.964929
+---Angle Optimization: 2 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 2: 0.971037
+K-E-K, State: A, Iteration: 2: 0.984801
+---Angle Optimization: 3 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 3: 0.984532
+K-E-K, State: A, Iteration: 3: 0.985537
+---Angle Optimization: 4 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 4: 0.988181
+K-E-K, State: A, Iteration: 4: 0.985793
+---Angle Optimization: 5 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 5: 0.981064
+K-E-K, State: A, Iteration: 5: 0.984459
+---Angle Optimization: 6 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 6: 0.982970
+K-E-K, State: A, Iteration: 6: 0.987352
+---Angle Optimization: 7 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 7: 0.978624
+K-E-K, State: A, Iteration: 7: 0.986065
+---Angle Optimization: 8 of 8---
+Running state A on GPU
+Launched HOOMD in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5
+Finished in /home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles/second-run-deeper/states/A_6.5.
+E-K-K, State: A, Iteration: 8: 0.965064
+K-E-K, State: A, Iteration: 8: 0.979178

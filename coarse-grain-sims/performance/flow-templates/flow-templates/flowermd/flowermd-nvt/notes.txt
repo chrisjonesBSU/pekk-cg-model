@@ -1,0 +1,4 @@
+This is a simple template for using signac-flow with hoomd-polymers.
+This randomly packs a box, shrinks to the target denisty and runs an NVT simulation.
+Use this as a starting place to build more specific workflows and functionalities
+available within hoomd-polymers. 

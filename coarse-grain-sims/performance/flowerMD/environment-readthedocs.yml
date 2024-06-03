@@ -1,0 +1,6 @@
+name: flowermd-readthedocs
+channels:
+  - conda-forge
+dependencies:
+  - sphinx==7.2.4
+  - sphinx_rtd_theme==1.3.0

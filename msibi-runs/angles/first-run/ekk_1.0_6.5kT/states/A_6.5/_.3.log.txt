@@ -1,0 +1,128 @@
+HOOMD-blue 2.9.6 CUDA (10.2) DOUBLE HPMC_MIXED TBB SSE SSE2 SSE3 
+Compiled: 03/17/2021
+Copyright (c) 2009-2019 The Regents of the University of Michigan.
+-----
+You are using HOOMD-blue. Please cite the following:
+* J A Anderson, J Glaser, and S C Glotzer. "HOOMD-blue: A Python package for
+  high-performance molecular dynamics and hard particle Monte Carlo
+  simulations", Computational Materials Science 173 (2020) 109363
+-----
+HOOMD-blue is running on the following GPU(s):
+ [0]  Tesla P100-PCIE-12GB  56 SM_6.0 @ 1.33 GHz, 12198 MiB DRAM, MNG
+run.py:007  |  system = read_gsd("/home/erjank_project/chrisjones/pekk-msibi-final/learning-runs/single-chains/workspace/406ebab1bb7367f5094f47bcde8b8e44/components.gsd", frame=-1, time_step=0)
+notice(2): Group "all" created containing 60 particles
+run.py:009  |  nl = hoomd.md.nlist.tree()
+-----
+You are using tree neighbor lists. Please cite the following:
+* M P Howard, J A Anderson, A Nikoubashman, S C Glotzer, and A Z
+  Panagiotopoulos. "Efficient neighbor list calculation for molecular simulation
+  of colloidal systems using graphics processing units", Computer Physics
+  Communications 203 (2016) 45--52
+* M P Howard, A Statt, F Madutsa, T M Truskett, and A Z Panagiotopoulos.
+  "Quantized bounding volume hierarchies for neighbor search in molecular
+  simulations on graphics processing units", Computational Materials Science 164
+  (2019) 139--146
+-----
+run.py:010  |  nl.reset_exclusions(exclusions=['1-2', '1-3'])
+notice(2): -- Neighborlist exclusion statistics -- :
+notice(2): Particles with 2 exclusions             : 2
+notice(2): Particles with 3 exclusions             : 2
+notice(2): Particles with 4 exclusions             : 56
+notice(2): Neighbors included by diameter          : no
+notice(2): Neighbors excluded when in the same body: no
+run.py:012  |  lj = hoomd.md.pair.lj(nlist=nl, r_cut=0)
+run.py:013  |  lj.pair_coeff.set('E', 'E', epsilon=0, sigma=1, r_cut=0)
+run.py:014  |  lj.pair_coeff.set('K', 'K', epsilon=0, sigma=1, r_cut=0)
+run.py:015  |  lj.pair_coeff.set('E', 'K', epsilon=0, sigma=1, r_cut=0)
+run.py:016  |  harmonic_bond = hoomd.md.bond.harmonic()
+run.py:017  |  harmonic_bond.bond_coeff.set('E-K', k=850, r0=1.47)
+run.py:018  |  harmonic_bond.bond_coeff.set('K-K', k=1450, r0=1.53)
+run.py:019  |  atable = hoomd.md.angle.table(width=200)
+run.py:020  |  atable.set_from_file('E-K-K', '/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles-harmonic-bonds-6.5kT/potentials/angle_pot.E-K-K.txt')
+run.py:021  |  atable.set_from_file('K-E-K', '/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles-harmonic-bonds-6.5kT/potentials/angle_pot.K-E-K.txt')
+run.py:023  |  _all = hoomd.group.all()
+run.py:024  |  hoomd.md.integrate.mode_standard(0.0003)
+run.py:026  |  integrator = hoomd.md.integrate.nvt(group=_all, **integrator_kwargs)
+run.py:000  |  
+import hoomd
+import hoomd.md
+from hoomd.init import read_gsd
+
+hoomd.context.initialize("")
+system = read_gsd("/home/erjank_project/chrisjones/pekk-msibi-final/learning-runs/single-chains/workspace/406ebab1bb7367f5094f47bcde8b8e44/components.gsd", frame=-1, time_step=0)
+
+nl = hoomd.md.nlist.tree()
+nl.reset_exclusions(exclusions=['1-2', '1-3'])
+
+lj = hoomd.md.pair.lj(nlist=nl, r_cut=0)
+lj.pair_coeff.set('E', 'E', epsilon=0, sigma=1, r_cut=0)
+lj.pair_coeff.set('K', 'K', epsilon=0, sigma=1, r_cut=0)
+lj.pair_coeff.set('E', 'K', epsilon=0, sigma=1, r_cut=0)
+harmonic_bond = hoomd.md.bond.harmonic()
+harmonic_bond.bond_coeff.set('E-K', k=850, r0=1.47)
+harmonic_bond.bond_coeff.set('K-K', k=1450, r0=1.53)
+atable = hoomd.md.angle.table(width=200)
+atable.set_from_file('E-K-K', '/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles-harmonic-bonds-6.5kT/potentials/angle_pot.E-K-K.txt')
+atable.set_from_file('K-E-K', '/home/erjank_project/chrisjones/pekk-msibi-final/msibi-runs/angles-harmonic-bonds-6.5kT/potentials/angle_pot.K-E-K.txt')
+
+_all = hoomd.group.all()
+hoomd.md.integrate.mode_standard(0.0003)
+integrator_kwargs = {'tau': 0.01, 'kT': 6.5}
+integrator = hoomd.md.integrate.nvt(group=_all, **integrator_kwargs)
+
+
+hoomd.dump.gsd(
+run.py:037  |  hoomd.run(6000000)
+** starting run **
+Time 00:00:10 | Step 129353 / 6000000 | TPS 12935.3 | ETA 00:07:33
+Time 00:00:20 | Step 263580 / 6000000 | TPS 13422.7 | ETA 00:07:07
+Time 00:00:30 | Step 397995 / 6000000 | TPS 13441.5 | ETA 00:06:56
+Time 00:00:40 | Step 532473 / 6000000 | TPS 13447.8 | ETA 00:06:46
+Time 00:00:50 | Step 666931 / 6000000 | TPS 13445.7 | ETA 00:06:36
+Time 00:01:00 | Step 801188 / 6000000 | TPS 13425.7 | ETA 00:06:27
+Time 00:01:10 | Step 935500 / 6000000 | TPS 13431.1 | ETA 00:06:17
+Time 00:01:20 | Step 1069894 / 6000000 | TPS 13439.3 | ETA 00:06:06
+Time 00:01:30 | Step 1203856 / 6000000 | TPS 13396.2 | ETA 00:05:58
+Time 00:01:40 | Step 1337167 / 6000000 | TPS 13331.1 | ETA 00:05:49
+Time 00:01:50 | Step 1471715 / 6000000 | TPS 13454.7 | ETA 00:05:36
+Time 00:02:00 | Step 1606418 / 6000000 | TPS 13470.3 | ETA 00:05:26
+Time 00:02:10 | Step 1741550 / 6000000 | TPS 13513.1 | ETA 00:05:15
+Time 00:02:20 | Step 1876324 / 6000000 | TPS 13477.4 | ETA 00:05:05
+Time 00:02:30 | Step 2011037 / 6000000 | TPS 13471.3 | ETA 00:04:56
+Time 00:02:40 | Step 2145992 / 6000000 | TPS 13495.5 | ETA 00:04:45
+Time 00:02:50 | Step 2280871 / 6000000 | TPS 13487.8 | ETA 00:04:35
+Time 00:03:00 | Step 2415742 / 6000000 | TPS 13487.1 | ETA 00:04:25
+Time 00:03:10 | Step 2550607 / 6000000 | TPS 13486.5 | ETA 00:04:15
+Time 00:03:20 | Step 2685189 / 6000000 | TPS 13458.2 | ETA 00:04:06
+Time 00:03:30 | Step 2819830 / 6000000 | TPS 13464 | ETA 00:03:56
+Time 00:03:40 | Step 2954897 / 6000000 | TPS 13506.6 | ETA 00:03:45
+Time 00:03:50 | Step 3089990 / 6000000 | TPS 13509.3 | ETA 00:03:35
+Time 00:04:00 | Step 3224612 / 6000000 | TPS 13462.2 | ETA 00:03:26
+Time 00:04:10 | Step 3359340 / 6000000 | TPS 13472.7 | ETA 00:03:16
+Time 00:04:20 | Step 3494109 / 6000000 | TPS 13476.9 | ETA 00:03:05
+Time 00:04:30 | Step 3628882 / 6000000 | TPS 13477.2 | ETA 00:02:55
+Time 00:04:40 | Step 3763405 / 6000000 | TPS 13452.3 | ETA 00:02:46
+Time 00:04:50 | Step 3897867 / 6000000 | TPS 13446.1 | ETA 00:02:36
+Time 00:05:00 | Step 4032488 / 6000000 | TPS 13462.1 | ETA 00:02:26
+Time 00:05:10 | Step 4167387 / 6000000 | TPS 13489.9 | ETA 00:02:15
+Time 00:05:20 | Step 4302123 / 6000000 | TPS 13473.5 | ETA 00:02:06
+Time 00:05:30 | Step 4436916 / 6000000 | TPS 13479.2 | ETA 00:01:55
+Time 00:05:40 | Step 4571620 / 6000000 | TPS 13470.3 | ETA 00:01:46
+Time 00:05:50 | Step 4706621 / 6000000 | TPS 13500.1 | ETA 00:01:35
+Time 00:06:00 | Step 4841393 / 6000000 | TPS 13477.1 | ETA 00:01:25
+Time 00:06:10 | Step 4976176 / 6000000 | TPS 13478.3 | ETA 00:01:15
+Time 00:06:20 | Step 5110998 / 6000000 | TPS 13482.1 | ETA 00:01:05
+Time 00:06:30 | Step 5246069 / 6000000 | TPS 13507.1 | ETA 00:00:55
+Time 00:06:40 | Step 5380745 / 6000000 | TPS 13467.6 | ETA 00:00:45
+Time 00:06:50 | Step 5515090 / 6000000 | TPS 13434.5 | ETA 00:00:36
+Time 00:07:00 | Step 5649897 / 6000000 | TPS 13480.7 | ETA 00:00:25
+Time 00:07:10 | Step 5784786 / 6000000 | TPS 13488.7 | ETA 00:00:15
+Time 00:07:20 | Step 5919707 / 6000000 | TPS 13492.1 | ETA 00:00:05
+Time 00:07:26 | Step 6000000 / 6000000 | TPS 13517.6 | ETA 00:00:00
+Average TPS: 13454.7
+---------
+-- Neighborlist stats:
+20151 normal updates / 20000 forced updates / 0 dangerous updates
+n_neigh_min: 0 / n_neigh_max: 0 / n_neigh_avg: 0
+shortest rebuild period: 99
+** run complete **

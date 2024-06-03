@@ -1,0 +1,2 @@
+Using the pair potentials form job id # b0a23d31f30e96810cc01f23a4fe909f 
+This one was ran not as long during each MSIBI iteration and has more shallow pair pot wells.

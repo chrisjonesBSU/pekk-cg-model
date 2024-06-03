@@ -1,0 +1,1 @@
+{"nvt_done": true, "sample_done": false, "tau_kT": 0.05, "ref_mass": 1.0, "ref_mass_units": "amu", "ref_energy": 1.0, "ref_energy_units": "kJ/mol", "ref_length": 1.0, "ref_length_units": "nm", "real_time_step": 0.5, "real_time_units": "fs", "n_beads": 1920, "target_box": [13.998056095504031, 13.998056095504031, 13.998056095504031]}

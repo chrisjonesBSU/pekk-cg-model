@@ -1,0 +1,1 @@
+This is a bare-bones template with no scripts in the signac-flow operations
