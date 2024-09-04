@@ -1,7 +1,9 @@
 *workspace/*
+*__pycache__/*
 repos/*
 figures/*
 *.out
+*.pyc
 signac.rc
 signac_project_document.json
 signac_statepoints.json
